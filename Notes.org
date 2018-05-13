@@ -1,29 +1,31 @@
-* Some notes for myself
-** Reasons to work at Blue Origin
-*** Facinated and excited about space flight since I was a kid.
-*** Technically really interesting work
-*** I believe it's in the best interest of humanity to become interplanetary, or at least not entirely Earth dwelling; kind of like "backing up the hard drive."
-** Reasons not to work at Lockheed
-*** Not as interested in working for the government (I don't like having to be on classified programs)
-*** Don't like having to do timecards/bill stuff hourly to the government
-*** Less interested in making things that kill people (using my powers for evil!)
-*** Not really interested in working on 20 year old Fortran projects.
+* Reasons to work at Blue Origin
+** Facinated and excited about space flight since I was a kid.
+** Technically really interesting work
+** I believe it's in the best interest of humanity to become interplanetary, or at least not entirely Earth dwelling; kind of like "backing up the hard drive."
+* Reasons not to work at Lockheed
+** Not as interested in working for the government (I don't like having to be on classified programs)
+** Don't like having to do timecards/bill stuff hourly to the government
+** Less interested in making things that kill people (using my powers for evil!)
+** Not really interested in working on 20 year old Fortran projects.
+* General Questions/observations
 ** What's re-entry like on new-shepherd?  
-*** Appears to be very mild, since the sub-orbital trajectory is basically straight up, then straight down.
-* Charon, then Goddard, then New shepherd, then New Glenn
-** New Armstrong?  Where is that one going to go?  
-* New Shepherd 3 is the one that just flew (April 29th) with cargo
-* BE-4
-** Fuled by LOX and methane, 550 kips thrust; 7 of them on the New Glenn first stage; these are the big boys.
-** IE, the New Glenn first stage has ~3.5 to 3.8 million pounds of thrust
-* BE-3
-** LH2 and LOX fuel
-** New Glenn upper stages will use these (110 kips each)
-* Crunchbase actually lists blue origin as a national security company, as well as a solar company
+*** Appears to be fairly mild, since the sub-orbital trajectory is basically straight up, then straight down.
+** Charon, then Goddard, then New shepherd, then New Glenn
+*** New Armstrong?  Where is that one going to go?  
+** New Shepherd 3 is the one that just flew (April 29th) with cargo
+** BE-4
+*** Fuled by LOX and methane, 550 kips thrust; 7 of them on the New Glenn first stage; these are the big boys.
+*** IE, the New Glenn first stage has ~3.5 to 3.8 million pounds of thrust
+*** Throttle range from 2400 kN 
+** BE-3
+*** LH2 and LOX fuel
+*** New Glenn upper stages will use these (490 kN / 110 kips each)
+*** Throttle range from 490 kN down to 89 kN (~18 %)
+** Crunchbase actually lists blue origin as a national security company, as well as a solar company
 
-* First 20 minutes of the presentation should be a high level overview of myself -- call it a personal statement.
-** Overarching mission is I want the world to benefit from the work I do.  That's why I went into renewable energy, and that's why I want to go into the space industry
-** Questions I want to answer
-*** Why did I choose my schools and degrees?
-*** Why am I changing jobs?
-
+* Presentation
+** First 20 minutes of the presentation should be a high level overview of myself -- call it a personal statement.
+*** Overarching mission is I want the world to benefit from the work I do.  That's why I went into renewable energy, and that's why I want to go into the space industry
+*** Questions I want to answer
+**** Why did I choose my schools and degrees?
+**** Why am I changing jobs?
