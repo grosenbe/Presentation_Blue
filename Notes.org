@@ -1,5 +1,5 @@
 * Reasons to work at Blue Origin
-** Facinated and excited about space flight since I was a kid.
+** Facinated and excited about space flight since I was a kid
 ** Technically really interesting work
 ** I believe it's in the best interest of humanity to become interplanetary, or at least not entirely Earth dwelling; kind of like "backing up the hard drive."
 * Reasons not to work at Lockheed
@@ -8,7 +8,7 @@
 ** Less interested in making things that kill people (using my powers for evil!)
 ** Not really interested in working on 20 year old Fortran projects.
 * General Questions/observations
-** What's re-entry like on new-shepherd?  
+** What's re-entry like on new-shepherd?
 *** Appears to be fairly mild, since the sub-orbital trajectory is basically straight up, then straight down.
 ** Charon, then Goddard, then New shepherd, then New Glenn
 *** New Armstrong?  Where is that one going to go?  
@@ -16,7 +16,9 @@
 ** BE-4
 *** Fuled by LOX and methane, 550 kips thrust; 7 of them on the New Glenn first stage; these are the big boys.
 *** IE, the New Glenn first stage has ~3.5 to 3.8 million pounds of thrust
-*** Throttle range from 2400 kN 
+*** Throttle range from 2400 kN to what?  480 kN?
+*** ULA is going to use it on their Vulcan launch vehicle
+**** TODO To what extent are they involved?
 ** BE-3
 *** LH2 and LOX fuel
 *** New Glenn upper stages will use these (490 kN / 110 kips each)
@@ -25,7 +27,51 @@
 
 * Presentation
 ** First 20 minutes of the presentation should be a high level overview of myself -- call it a personal statement.
-*** Overarching mission is I want the world to benefit from the work I do.  That's why I went into renewable energy, and that's why I want to go into the space industry
+*** This is where I talk about why I want to go into the space industry
+**** Overarching mission is I want the world to benefit from the work I do.  That's why I went into renewable energy, and that's why I want to go into the space industry
+**** Might want to mention that our team won the robotics competition
 *** Questions I want to answer
 **** Why did I choose my schools and degrees?
+***** Although UW as actually the first school that I heard back from, I chose San Diego for undergrad because it made more financial sense.
+***** USC because it has a highly rated MS program for dynamics and controls
 **** Why am I changing jobs?
+***** I've always wanted to work in space
+** Second 30 minutes is an overview of stuff I did at work.
+*** Mechanical Engineer role (SR)
+**** Worked on the CDSEP plant performance model, integrating the Rocketdyne and Cobra code. (Fortran)
+**** Worked with the PV team on power project development
+***** Development of the PV performance model and design tool, and the systems engineering trades it allowed us to do quickly.
+***** Development of the CSP performance model/implementation of the smart dispatch logic in Matlab.
+***** Worked with the CSP team as well, mostly with Charles.
+**** Developed and troubleshot the financial model
+***** Although this was a spreadsheet, I ended up learning a bit about project finance and internal return calculation.
+*** Systems engineer role (SR)
+**** Development of the SR-120 control software (Matlab)
+***** Kalman filter development
+***** Include some stuff about the "zero" finding logic?
+***** Development of the SVS-Vistek and ViewWorks camera interfaces in C#
+**** Test campaigns for the SR-120
+***** Determination and definition of performance requirements (IE mirror slope and pointing errors)
+***** Hands on testing at Sandia
+****** Troubleshooting and modifying the AMS software
+***** Camera and SPCA network setup 
+***** Daily SCRUMS (agile development) and piloting the system with Mark and Roger
+***** All of the performance data processing, which I had to automate because the rest of the team started on the SR-96
+**** Development of the in-situ/star characterization software
+***** Development of the control system interface; changing a relational object database into an object database
+*** Describe the transition to MFC
+*** Senior Systems Engineer (MFC)
+**** Work at the ATB
+***** Describe what the ATB is and what it's intended to be
+***** Describe the loitering munition sim and the delay problem.
+****** Software overlay generation/frame numbers
+****** Camera triggering
+******* Describe the oscilloscope testing to determine 
+******* Display port -> DVI -> HDMI -> VGA -> BNC 5 wire (RGB + HSYNC + VSYNC) -> Alligator clips
+****** Show the histogram
+**** Work on PAC-3, which is intended to engage and destroy tactical ballistic missiles
+***** Most of it is classified
+***** Work on a Linux computing cluster on a continuous system
+***** Integrating changes to the simulation from both internal, and also from the customer (IE the government), as well as the ground system components (which are from Raytheon).
+***** Integration of an older version of the simulation (entirely Fortran/Linux based) and modularizing it into several libraries which the customer can link together.  
+***** Builds on Windows or Linux
