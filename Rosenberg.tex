@@ -15,30 +15,53 @@
 }
 
 \usepackage{graphicx} % Allows including images
-\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{lipsum}
 
 %% Bunch of stuff to make a flowchart with tikz
 \usepackage{tikz}
-\usetikzlibrary{matrix,calc,shapes,arrows}
+\usetikzlibrary{shapes.geometric,backgrounds,positioning,
+  positioning-plus,node-families,calc}
 \tikzset{
-  treenode/.style = {shape=rectangle, rounded corners,
-    draw, anchor=center,
-    text width=5em, align=center,
-    top color=white, bottom color=blue!20,
-    inner sep=1ex},
-  decision/.style = {treenode, diamond, inner sep=0pt},
-  root/.style     = {treenode, font=\Large,
-    bottom color=red!30},
-  env/.style      = {treenode, font=\ttfamily\normalsize},
-  finish/.style   = {root, bottom color=green!40},
-  dummy/.style    = {circle,draw}
+  basic box/.style = {
+    shape = rectangle,
+    align = center,
+    draw  = #1,
+    fill  = #1!25,
+    rounded corners},
+  header node/.style = {
+    Minimum Width = header nodes,
+    font          = \strut\Large\ttfamily,
+    text depth    = +0pt,
+    fill          = white,
+    draw},
+  header/.style = {%
+    inner ysep = +1.5em,
+    append after command = {
+      \pgfextra{\let\TikZlastnode\tikzlastnode}
+      node [header node] (header-\TikZlastnode) at (\TikZlastnode.north) {#1}
+      node [span = (\TikZlastnode)(header-\TikZlastnode)]
+        at (fit bounding box) (h-\TikZlastnode) {}
+    }
+  },
+  hv/.style = {to path = {-|(\tikztotarget)\tikztonodes}},
+  vh/.style = {to path = {|-(\tikztotarget)\tikztonodes}},
+  fat blue line/.style = {ultra thick, blue}
 }
-\tikzstyle{format} = [draw, thin, fill=blue!20]
-\tikzstyle{medium} = [ellipse, draw, thin, fill=green!20, minimum height=2.5em]
 
-
-\newcommand{\yes}{edge node [above] {yes}}
-\newcommand{\no}{edge  node [left]  {no}}
+%% \usetikzlibrary{shapes,arrows}
+%% \tikzset{
+%%   treenode/.style = {shape=rectangle, rounded corners,
+%%     draw, anchor=center,
+%%     text width=5em, align=center,
+%%     top color=white, bottom color=blue!20,
+%%     inner sep=1ex},
+%%   decision/.style = {treenode, diamond, inner sep=0pt},
+%%   root/.style     = {treenode, font=\Large,
+%%     bottom color=red!30},
+%%   env/.style      = {treenode, font=\ttfamily\normalsize},
+%%   finish/.style   = {root, bottom color=green!40},
+%%   dummy/.style    = {circle,draw}
+%% }
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -148,6 +171,11 @@
   \includegraphics[width=.7\linewidth]{HeliostatImage.jpg}
 \end{frame}
 
+%% Maybe a slide here to describe the state of the company whenn I joined it?
+%% IE, that on the PV side (and really CSP as well), we didn't have any technical people.
+%% I was THE technical guy on the PV team, so I had to learn quickly and be resourceful.
+%% The company's business model at the time allowe this, because the company still thought of itself as a power development company first, tech development a distant second
+
 \begin{frame}
   \frametitle{As A Mechanical Engineer}
   \begin{itemize}
@@ -162,6 +190,7 @@
 \end{frame}
 
 % PV performance model development slide
+% Design of PV plants based on the open circuit voltage, short circuit current of the modules (show a PV IV curve to describe)
 \begin{frame}
   \frametitle{Photovoltaic Performance Toolkit Development}
   It would be pretty cool to make this kind of a ``web'' layout, rather than just bullets
@@ -196,6 +225,10 @@
 \begin{frame}
   \frametitle{Performance Model}
   This was used to model interconnection losses, etc.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Flux Model}
 
 \end{frame}
 
@@ -280,6 +313,13 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{IR Projector Setup}
+  %test IR camera selection
+  %sample pixel packing code -- knew how to do this from work at SR on cameras
+
+\end{frame}
+
+\begin{frame}
   \frametitle{PAC-3} % I might want to be a little sparing in my descriptions here, because this stuff is classified
   \begin{itemize}
   \item Intended to engage and destroy tactical ballistic missiles
@@ -294,45 +334,77 @@
 
 \begin{frame}
   \frametitle{Configuration Management on PACNET}
-
+  \begin{itemize}
+  \item Handling configuration management on a simulation of about 800,000 SLOC
+  \item Handling requests for modification
+  \item Installing new releases of our code
+  \item Handling updates from the system integrator
+  \end{itemize}
 \end{frame}
 
-%% A demo flow chart.
-% Define block styles
-\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
-    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
-\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
-    text width=5em, text centered, rounded corners, minimum height=4em]
-\tikzstyle{line} = [draw, -latex']
-\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-  minimum height=2em]
+%% Image injection/projection flow charts
+%define some colors for the blocks
+\definecolor{light_blue}{RGB}{2,127,237}
+
+%% color definitions for the different signals
+\definecolor{Ethernet}{RGB}{5,163,0}        %green
+\definecolor{HDMI}{RGB}{163,111,0}   %gold
+\definecolor{USB}{RGB}{0,0,255}
+\definecolor{Data}{RGB}{0,0,0}
 
 \begin{frame}
-  \frametitle{Another flow chart}
-  \center
-  \resizebox{5.0cm}{!}{
-\begin{tikzpicture}[node distance = 2cm, auto]
-    % Place nodes
-    \node [block] (init) {initialize model};
-    \node [cloud, left of=init] (expert) {expert};
-    \node [cloud, right of=init] (system) {system};
-    \node [block, below of=init] (identify) {identify candidate models};
-    \node [block, below of=identify] (evaluate) {evaluate candidate models};
-    \node [block, left of=evaluate, node distance=3cm] (update) {update model};
-    \node [decision, below of=evaluate] (decide) {is best candidate better?};
-    \node [block, below of=decide, node distance=3cm] (stop) {stop};
-    % Draw edges
-    \path [line] (init) -- (identify);
-    \path [line] (identify) -- (evaluate);
-    \path [line] (evaluate) -- (decide);
-    \path [line] (decide) -| node [near start] {yes} (update);
-    \path [line] (update) |- (identify);
-    \path [line] (decide) -- node {no}(stop);
-    \path [line,dashed] (expert) -- (init);
-    \path [line,dashed] (system) -- (init);
-    \path [line,dashed] (system) |- (evaluate);
+  \frametitle{Image Projection Flow Chart}
+\begin{tikzpicture}[node distance = 0.6cm, thick, nodes = {align = center},
+    >=latex]
+  %% simulation host
+  \node[fill = light_blue] (6_DOF)
+       {6DOF state @\\$t_{n}$};
+  \node[fill = light_blue, below = of 6_DOF] (Cigi_Cmds)
+       {Cigi Update Commands};
+  \node[fill = light_blue, below = of Cigi_Cmds] (Frame_Logger)
+       {Frame Logger};
+  \node[fill = light_blue, below = of Frame_Logger] (PNG)
+       {Images Saved as PNG};
+  \node[fill = light_blue, right = 1.5 of PNG] (Timestamp_Log)
+       {Logging of time stamps\\and file names};
+  \node[fill = light_blue, left = 1.5 of PNG] (Update_Log)
+       {Cigi Update Log\\$t_n$, Frame Number};
+  \node[fill = light_blue, above = 1.25 of 6_DOF] (Monitor)
+       {Monitor};
+
+  %% Image generator
+  \node[fill = light_blue, left = 4 of 6_DOF] (Scene_Render)
+       {Scene\\Rendering};
+
+  %% Flight computer
+  \node[fill = light_blue, right = 1.5 of Cigi_Cmds] (Image)
+       {Image Received @\\$t_{n+\delta}$};
+  \node[fill = light_blue, above = 1.25 of Image] (Camera)
+       {Camera};
+
+  %background nodes to separate out the computers
+  \begin{scope}[on background layer]
+    \node[fit = (6_DOF)(Cigi_Cmds)(Frame_Logger), basic box = red,
+      header = Simulation Host] (Host) {};
+
+    \node[fit = (Scene_Render), basic box = blue,
+      header = Image Generator] (Image_Generator) {};
+
+    \node[fit = (Image)(Camera), basic box = blue,
+      header = Flight Computer] (Flight_Computer) {};
+  \end{scope}
+  
+  %% paths to connect the nodes
+  \path[very thick, Data] (6_DOF.south) edge[->] (Cigi_Cmds.north);
+  \path[very thick, Ethernet] (Cigi_Cmds) edge[->] (Scene_Render);
+  \path[very thick, Data] (Cigi_Cmds) edge[->] (Update_Log);
+  \path[very thick, HDMI] (Scene_Render) edge[->] (Monitor.west);
+  \path[very thick, HDMI] (Monitor.east) edge[->] (Camera.west);
+  \path[very thick, USB, hv] (Camera.south) edge[->] (Image);
+  \path[very thick, Ethernet] (Image) edge[->] node[pos=0.35, sloped, above] {Image Data} (Frame_Logger);
+  \path[very thick, Data] (Frame_Logger) edge[->] (Timestamp_Log);
+  \path[very thick, Data] (Frame_Logger) edge[->] (PNG);
 \end{tikzpicture}
-}
 \end{frame}
 
 \begin{frame}
