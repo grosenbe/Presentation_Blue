@@ -75,3 +75,31 @@
 ***** Integrating changes to the simulation from both internal, and also from the customer (IE the government), as well as the ground system components (which are from Raytheon).
 ***** Integration of an older version of the simulation (entirely Fortran/Linux based) and modularizing it into several libraries which the customer can link together.  
 ***** Builds on Windows or Linux
+* Slides
+1. Goals
+2. Interests
+3. Schools (summary)
+4. Undergrad
+5. Grad school
+6. SR -- Summary
+7. SR -- mechanical engineer
+8. SR -- PV design tool
+9. SR -- Design Criteria for PV plants
+10. SR -- Figures of merit for a Candidate Configuration
+11. SR -- DC System Design
+12. SR -- AC System Design
+14. SR -- Systems Engineer
+15. SR -- SR-120 Development summary
+16. SR -- SR-120 control software
+17. SR -- SR-120 Hardware selection
+18. SR -- SR-120 In situ heliostat characterization
+19. SR -- SR-120 I&T (Sandia)
+20. SR -- SR-120 I&T Crescent Dunes
+21. SR -- SR-120 Raymer
+22. Transitioning from SolarReserve
+23. Lockheed -- Loitering munition simulation overview
+24. Lockheed -- LMS Frame delay problem
+25. Lockheed -- Image projecrtion flow chart
+26. Lockheed -- IR Projector Setup
+27. Lockheed -- Air and Missile Defense
+28. Lockheed -- Configuration management

@@ -269,26 +269,77 @@
   \end{columns}
 \end{frame}
 
+%% \begin{frame}
+%% \frametitle{Design Criteria for PV Plants}
+%% \begin{table}
+%% \begin{tabular}{l l l}
+%% \toprule
+%% \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+%% \midrule
+%% Treatment 1 & 0.0003262 & 0.562 \\
+%% Treatment 2 & 0.0015681 & 0.910 \\
+%% Treatment 3 & 0.0009271 & 0.296 \\
+%% \bottomrule
+%% \end{tabular}
+%% \end{table}
+%% \end{frame}
+
 %% Describe what knobs we have to turn in designing a plant
-%% Generally, the plant's AC capacity is fixed by the interconnection agreement
-%% Module and inverter selection
-%% Fixed tilt or tracking
-%% DC:AC Ratio
-%% Ground coverage ratio
-%% Inverter MPPT Range
 \begin{frame}
-\frametitle{Design Criteria for PV Plants}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\end{table}
+  \frametitle{Design Criteria for PV Plants}
+  How we characterize the ``goodness'' of a particular configuration.
+  \begin{columns}[t]
+    \column{0.45\textwidth}
+    \begin{block}{Financial Considerations}
+      \begin{itemize}
+      \item Construction time \& cost
+      \item Operation and maintenance costs for different tech
+      \item Module cost and degradation rate
+      \item Technology ``bankability''
+      \end{itemize}
+    \end{block}
+
+    \column{0.45\textwidth}
+    \begin{block}{Performance Considerations}
+      \begin{itemize}
+      \item Thin film vs monocrystalline vs polycrystalline vs CPV
+      \item AC capacity (generally fixed by the interconnection agreement)
+      \item Module and inverter selection
+      \item Fixed tilt or tracking
+      \item DC:AC Ratio
+      \item Ground coverage ratio
+      \item Inverter MPPT Range
+      \end{itemize}
+    \end{block}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Figures of Merit for a Candidate Configuration}
+  \begin{figure}
+
+  \begin{itemize}
+  \item Annual Energy Production $\rightarrow$ From performance model.
+  \item Performance Ratio $\rightarrow$ From performance model.
+  \item Specific Yield $\rightarrow$ From performance model.
+  \item Levelized Cost of Energy $\rightarrow$ From financial model.
+    \begin{itemize}
+    \item All of the above items are inputs for the project financial model.
+    \end{itemize}
+  \end{itemize}
+    
+    \center
+    $NPV=\displaystyle\sum\limits_{t=0}^N\frac{R_{t}}{(1+d)^t}$
+  \end{figure}
+  \begin{figure}
+    \raggedright
+    \scriptsize
+    $R_{t}$ - Net cash flow at time $t$\\
+    $d$ - Discount rate\\
+    $t$ - Time of the cash flow
+  \end{figure}
+  
 \end{frame}
 
 \begin{frame}
@@ -346,21 +397,6 @@ Treatment 3 & 0.0009271 & 0.296 \\
       \includegraphics[width=0.75\textwidth]{PWM.png}
     \end{figure}    
   \end{columns}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Design Criteria for PV Plants}
-How we characterize the ``goodness'' of a particular configuration.
-\begin{itemize}
-\item Annual Energy Production $\rightarrow$ From performance model.
-\item Performance Ratio $\rightarrow$ From performance model.
-\item Specific Yield $\rightarrow$ From performance model.
-\item Levelized Cost of Energy $\rightarrow$ From financial model.
-  \begin{itemize}
-  \item All of the above items are inputs for the project financial model.
-  \end{itemize}
-\end{itemize}
 \end{frame}
 
 \begin{frame}
