@@ -76,30 +76,44 @@
 ***** Integration of an older version of the simulation (entirely Fortran/Linux based) and modularizing it into several libraries which the customer can link together.  
 ***** Builds on Windows or Linux
 * Slides
-1. Goals
-2. Interests
-3. Schools (summary)
-4. Undergrad
-5. Grad school
-6. SR -- Summary
-7. SR -- mechanical engineer
-8. SR -- PV design tool
-9. SR -- Design Criteria for PV plants
-10. SR -- Figures of merit for a Candidate Configuration
-11. SR -- DC System Design
-12. SR -- AC System Design
-14. SR -- Systems Engineer
-15. SR -- SR-120 Development summary
-16. SR -- SR-120 control software
-17. SR -- SR-120 Hardware selection
-18. SR -- SR-120 In situ heliostat characterization
-19. SR -- SR-120 I&T (Sandia)
-20. SR -- SR-120 I&T Crescent Dunes
-21. SR -- SR-120 Raymer
-22. Transitioning from SolarReserve
-23. Lockheed -- Loitering munition simulation overview
-24. Lockheed -- LMS Frame delay problem
-25. Lockheed -- Image projecrtion flow chart
-26. Lockheed -- IR Projector Setup
-27. Lockheed -- Air and Missile Defense
-28. Lockheed -- Configuration management
+1. Overarching mission
+2. Motivation -- why I'd like to go into space travel
+3. Interests
+4. Building rockets as a kid -- other interests?
+5. Schools (summary)
+6. Undergrad
+7. Grad school
+8. Career Start -- Renewable Energy
+9. SR -- Summary & Background -- include diurnal cycle here
+10. SR -- As mechanical engineer (overview of the role)
+11. SR -- PV Design and Performance Evaluation Toolkit Overview (list inputs and outputs & describe how this was implemented (excel + matlab) [50%]
+12. SR -- PV System design tool (inputs and outputs)
+13. SR -- Design Criteria for PV plants
+14. SR -- Figures of merit for a Candidate Configuration
+15. SR -- Utility Scale Photovoltaic Overview
+16. SR -- Configuring the DC System
+17. SR -- Configuring the AC System
+18. SR -- Utility PV Inverters
+19. SR -- PV Performance Calculation
+20. SR -- CSP Technology Overview (mostly describes why we the performance model includes a flux model)
+21. SR -- CSP Performance: Flux Model
+22. SR -- Systems Engineer
+23. SR -- SR-120 Development summary
+24. SR -- SR-120 Control software
+25. SR -- SR-120 Hardware selection
+26. SR -- Crescent Dunes -- In situ heliostat characterization
+27. SR -- In Situ Characterization -- Software Development
+28. SR -- In Situ Characterization -- Hardware Development
+29. SR -- I&T Sandia
+30. SR -- I&T Crescent Dunes
+31. SR -- I&T Raymer
+32. Transitioning from SolarReserve
+33. Lockheed -- Affordability Test Bed Overview
+34. Lockheed -- Loitering munition simulation overview
+35. Lockheed -- Loitering munition simulation overview (continued)
+36. Lockheed -- LMS Frame delay problem
+37. Lockheed -- Image projecrtion flow chart
+38. Lockheed -- IR Projector Setup
+39. Lockheed -- Air and Missile Defense
+40. Lockheed -- Configuration management
+41. Closing comments
