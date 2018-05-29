@@ -719,8 +719,14 @@
   \item Non-zero latency between the $n^{th}$ update of the simulation state
     (simulation time $t_{n}$) and when the image is rendered on the
     screen ($t_{n+\delta}$)
+    \begin{itemize}
+    \item CIGI communication latency
+    \item Image rendering time
+    \end{itemize}
+  \item Images are received by the flight computer in order, but delayed
+  \item Image tracker receives frame n, but has simulation state information for frame n+1
   \item Causes erratic performance of the camera motion compensation
-    code, which works based on TODO describe...
+    code
     \begin{itemize}
     \item This problem worsens with shorter time constant (IE faster)
       munitions
@@ -729,23 +735,45 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Loitering Munitions -- Frame Delay Solution}
-  \begin{itemize}
-    \item Software frame number overlay generation using the image generator's API with CIGI messaging
-  \item Camera triggering
+  \frametitle{Loitering Munitions -- Frame Delay Solution}  
+  \begin{columns}[t]            % t for top alignment, c for centered
+    \column{0.45\textwidth}
+    \begin{figure}
+      \includegraphics[width=\textwidth]{DelayHistogram.png}
+    \end{figure}
+    
+    \column{0.45\textwidth}
     \begin{itemize}
-    \item Display port $\rightarrow$ DVI $\rightarrow$ HDMI
-      $\rightarrow$ VGA $\rightarrow$ BNC 5 wire (RGB + HSYNC + VSYNC)
-      $\rightarrow$ Alligator clips $\rightarrow$ Camera
+    \item Software frame number overlay generation using the image
+      generator's API with CIGI messaging
+    \item Open source optical character recognition library utilized
+      to read frame numbers off the screen
+      \item $\delta=t_{Image Capture} - t_{Simulation}$
     \end{itemize}
-  \item Optical character recognition software written to read the
-    frame number off the screen
-  \item TODO Show the frame delay histogram (generate one
-    in Python)
-  \item Oscilloscope testing to determine sync pulse voltage and frequency
-  \item Tested the camera's hardware triggering with a waveform generator
-    before installing the hardware on the bench    
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Loitering Munitions -- Frame Delay Solution (Continued)}
+  \begin{columns}[t]
+    \column{0.45\textwidth}
+    \begin{figure}
+      \includegraphics[width=\textwidth]{DemoLMSFrame_Corrupt.png}
+    \end{figure}
+    
+    \column{0.45\textwidth}
+  \begin{itemize}
+      \item Camera triggering using vertical sync pulses
+      \begin{itemize}
+      \item IG display port $\rightarrow$ DVI $\rightarrow$ HDMI
+        $\rightarrow$ VGA $\rightarrow$ BNC 5 wire (RGB + HSYNC + VSYNC)
+        $\rightarrow$ Alligator clips $\rightarrow$ Camera
+      \end{itemize}
+    \item Oscilloscope testing to determine sync pulse voltage and frequency
+    \item Tested the camera's hardware triggering with a waveform generator
+      before installing the hardware on the bench    
   \end{itemize}
+  \end{columns}
 \end{frame}
 
 %% Image injection/projection flow charts
@@ -814,11 +842,6 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Loitering Munition Deployment}
-  %% Deployed at gifix for the army
-\end{frame}
-
-\begin{frame}
   \frametitle{IR Projector Setup}
   %test IR camera selection
   %sample pixel packing code -- knew how to do this from work at SR on cameras
@@ -828,7 +851,7 @@
 \begin{frame}
   \frametitle{PAC-3} % I might want to be a little sparing in my descriptions here, because this stuff is classified
   \begin{itemize}
-  \item Intended to engage and destroy tactical ballistic missiles
+  \item Intended to destroy incoming tactical ballistic missiles and aircraft
   \item Most of it is classified
   \item Work on a Linux computing cluster on a continuous time simulation
   \item Integrating changes to the simulation from both internal, and also from the customer (IE the government), as well as the ground system components (which are from Raytheon).

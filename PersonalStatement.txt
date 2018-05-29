@@ -1,7 +1,53 @@
-* Paragraph 1 -- Reasons Blue Origin would be interesting to work
+* My interests and thoughts on human access to space and space flight in general.  No requirements in formatting or word count -- free writing exercise
+* Remember that Jeff Bezos (The company's founder) has said that future generations won't be able to survive on Earth without expanding into other parts of the solar system.
+** "The alternative is stasis."
+* Human socities will have to stop growing due to environmental and other constraints.
+** Not something we may choose to do, but something we must do.
+* What could be more exciting than exploring space?  Plenty of inner trekkie quotes that I won't make here.
+* 
+
+* Paragraph 1 -- Reasons the space industry would be interesting to work in
 ** I've been excited about space since I was a kid
 ** I believe it's humanity's greatest challenge, and it would be an honor to work on it
+** Humanity's (at least, this generation's) most challenging endeavor
+*** requiring our best efforts in engineering, finance, project management
+** We're also on the brink of humanity's greatest adventure.
+
 * Paragraph 2 -- Reasons why I believe it's imperitive for humanity to leave the planet
-** Existential disaster reasons -- GRB, war, famine, disease, other things that could extinguish all life on earth
-** Running out of energy -- as someone who used to work in the energy industry, I have a pretty good perspective of this
+** Existential disaster reasons -- war, famine, disease, other cataclysmic events that could extinguish all life on earth (GRB, development of malevolent artificial super intelligence)
+** More pedestrian reasons, such as simply running out of energy resources.
+*** As someone who used to work in the energy industry, I have a pretty good perspective of this.
+** As Bezos put it, the alternative for humanity is stasis.  Human societies would have to stop expanding due to environmental and other constraints 
+
+There are several reasons why the space industry and space flight
+would be interesting and exciting to work in.  Like many American
+youths, I was fascinated by the idea of space travel as a child.  
+Space flight is certainly this generation's greatest challenge, and it
+would be an honor to work on it.  It will require humanity's best efforts in
+engineering, finance, project management, and several other fields.
+
+
+
+Space flight is also one of humanity's greatest survival imperitives, for
+several reasons.  There are potential cataclysmic events
+facing the earth which could potentially eliminate life on the planet.
+These include internal threats such as war, famine, and disease, as
+well as external threats such as a stray comet or the development of
+artificial super intelligence.  There are also more pedestrian
+possibilities, such as the consumption of all of the planet's natural
+resources.
+
+In the face of these threats, humanity's chance of survival is much
+better if we are a space-faring species.  One might think of this as
+something like "backing up the hard drive" for the species.  A rare
+event which could extinguish life on the planet would not be enough to
+extinguish humanity.
+
+Finally, as Jeff Bezos has put it, the alternative to space flight for
+humanity is stasis.  In the absence of space flight, human societies
+would have to stop expanding due to environmental and other
+constraints.  Human history can be viewed through a variety of lenses,
+but it is undeniably a story of continued achievement from any perspective.
+Stagnation is not in our destiny as a species.
+
 * Conclusion paragraph
