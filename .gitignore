@@ -6,3 +6,7 @@
 *.nav
 *.snm
 *.aux
+*latexmk
+*.dvi
+*.fls
+*.xlsx
