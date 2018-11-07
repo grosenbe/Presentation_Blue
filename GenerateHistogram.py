@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -10,7 +10,7 @@ mu, sigma = 30, 5
 x = mu + sigma * np.random.randn(10000)
 
 # the histogram of the data
-n, bins, patches = plt.hist(x, 25, density=True, facecolor='b', alpha=0.75, edgecolor='black')
+n, bins, patches = plt.hist(x, 25, facecolor='b', alpha=0.75, edgecolor='black')
 frame = plt.gca()
 frame.axes.get_xaxis().set_ticks([])
 frame.axes.get_yaxis().set_ticks([])
